@@ -28,7 +28,7 @@ def call_function(function_call_part, verbose=False):
         print(f" - Calling function: {function_call_part.name}")
 
     func_args = function_call_part.args.copy()
-    func_args["working_directory"] = "./calculator"
+    func_args["working_directory"] = "./pong"
     try:
         result = functions[function_call_part.name](**func_args)
         return types.Content(
